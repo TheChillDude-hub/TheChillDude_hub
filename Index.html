@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dude's Personal Site</title>
+  <style>
+    /* === ANIMATIONS === */
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInTop {
+      0% { opacity: 0; transform: translateY(-50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    /* === STYLING === */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(120deg, #1e1e2f, #3c3c64);
+      color: white;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    header {
+      padding: 40px 0;
+      animation: slideInTop 1s ease-out;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #f8f8f8;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+      animation: fadeIn 2s ease-in;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.05);
+      animation: fadeIn 2.5s ease-in;
+    }
+
+    .cool-button {
+      background: linear-gradient(45deg, #6b8ce3, #88d3ce);
+      border: none;
+      padding: 15px 30px;
+      border-radius: 30px;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(100, 150, 250, 0.4);
+      transition: all 0.3s ease;
+      margin-top: 20px;
+      animation: pulse 2s infinite;
+    }
+
+    .cool-button:hover {
+      background: linear-gradient(45deg, #88d3ce, #6b8ce3);
+      box-shadow: 0 6px 20px rgba(120, 180, 255, 0.6);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <button class="cool-button" onclick="showMessage()">Click Me, Dude!</button>
+
+  <header>
+    <h1>Welcome to My World</h1>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Yo! I'm just a cool dude learning how to build websites. This is my first one and it’s powered by ChatGPT magic!</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Hit me up at: <a href="mailto:cooldude@email.com">cooldude@email.com</a></p>
+    <p>Follow me on IG: <a href="https://instagram.com" target="_blank">@cooldude</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Cool Dude. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showMessage() {
+      alert("Yo, you clicked the button! You're awesome, dude!");
+    }
+  </script>
+
+</body>
+</html>
